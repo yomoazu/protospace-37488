@@ -42,12 +42,12 @@ Things you may want to cover:
 | title      | string     | not null: false                    |
 | catch_copy | text       | not null: false                    |
 | concept    | text       | not null: false                    |
-| user       | references | not null: false, foreign_key: true |
+| user       | prototype | not null: false, foreign_key: true |
 
 ## comments テーブル
 
 | Column    | Type       | Options                            |
 | --------- | ---------- | ---------------------------------- |
 | content   | text       | not null: false                    |
-| prototype | references | not null: false, foreign_key: true |
-| user      | references | not null: false, foreign_key: true |
+| prototype | prototype | not null: false, foreign_key: true |
+| user      | prototype | not null: false, foreign_key: true |

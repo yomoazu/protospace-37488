@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'messages/index'
+  devise_for :users
+  # get 'protospaces/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-root to: "protospace#index"
+root to: "prototypes#index"
+resources :prototypes, only: [:index, :new,:create,:destroy]
 end
